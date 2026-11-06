@@ -61,6 +61,7 @@ extern PyObject* PyInit__struct(void);
 extern PyObject* PyInit__datetime(void);
 extern PyObject* PyInit__functools(void);
 extern PyObject* PyInit__json(void);
+extern PyObject* PyInit__version(void);
 #ifdef _Py_HAVE_ZLIB
 extern PyObject* PyInit_zlib(void);
 #endif
@@ -152,6 +153,7 @@ struct _inittab _PyImport_Inittab[] = {
     {"_datetime", PyInit__datetime},
     {"_functools", PyInit__functools},
     {"_json", PyInit__json},
+    {"_version", PyInit__version},
     {"_suggestions", PyInit__suggestions},
 
     {"xxsubtype", PyInit_xxsubtype},

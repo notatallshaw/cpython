@@ -788,6 +788,8 @@ MODULE__INTERPCHANNELS_FALSE
 MODULE__INTERPCHANNELS_TRUE
 MODULE__INTERPRETERS_FALSE
 MODULE__INTERPRETERS_TRUE
+MODULE__VERSION_FALSE
+MODULE__VERSION_TRUE
 MODULE__TYPING_FALSE
 MODULE__TYPING_TRUE
 MODULE__TYPES_FALSE
@@ -36248,6 +36250,28 @@ then :
 fi
 
 
+        if test "$py_cv_module__version" != "n/a"
+then :
+  py_cv_module__version=yes
+fi
+   if test "$py_cv_module__version" = yes; then
+  MODULE__VERSION_TRUE=
+  MODULE__VERSION_FALSE='#'
+else
+  MODULE__VERSION_TRUE='#'
+  MODULE__VERSION_FALSE=
+fi
+
+  as_fn_append MODULE_BLOCK "MODULE__VERSION_STATE=$py_cv_module__version$as_nl"
+  if test "x$py_cv_module__version" = xyes
+then :
+
+
+
+
+fi
+
+
         if test "$py_cv_module__interpreters" != "n/a"
 then :
   py_cv_module__interpreters=yes
@@ -39152,6 +39176,10 @@ Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${MODULE__TYPING_TRUE}" && test -z "${MODULE__TYPING_FALSE}"; then
   as_fn_error $? "conditional \"MODULE__TYPING\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${MODULE__VERSION_TRUE}" && test -z "${MODULE__VERSION_FALSE}"; then
+  as_fn_error $? "conditional \"MODULE__VERSION\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${MODULE__INTERPRETERS_TRUE}" && test -z "${MODULE__INTERPRETERS_FALSE}"; then
